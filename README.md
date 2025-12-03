@@ -1,4 +1,4 @@
-![output](https://github.com/user-attachments/assets/9284ebc7-4149-4a0a-8452-494298465d15)# Lolita
+# Lolita
 
 Lolita is a lightweight image editing application for adjusting and enhancing pictures in real time. Built with C++23 and ImGui, it focuses on a clean, responsive user experience with essential image processing features.
 

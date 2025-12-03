@@ -1,0 +1,52 @@
+# ---- OS / Editor Junk ----
+.DS_Store
+Thumbs.db
+
+# ---- Build Artifacts ----
+build/
+cmake-build-*/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CTestTestfile.cmake
+cmake_install.cmake
+Makefile
+*.cmake
+
+# ---- Binaries & Executables ----
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+*.app
+*.bin
+
+# ---- Development Tools ----
+# ImGui ini configs (optional; keep if you want user layout saved)
+imgui.ini
+
+# direnv / Nix
+.direnv/
+.envrc
+
+# Logs / Temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# ---- IDE / Editor Config ----
+.vscode/
+.idea/
+*.code-workspace
+
+# ---- Vendor Dependencies (optional) ----
+# Uncomment if vendor is externally clonable
+# vendor/
+
+# ---- Cache ----
+.cache/
+.sln.lua

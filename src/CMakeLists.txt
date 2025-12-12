@@ -1,4 +1,4 @@
-add_executable(${PROJECT_NAME} main.cpp renderer.cpp lolita.cpp)
+add_executable(${PROJECT_NAME} main.cpp renderer.cpp lolita.cpp effect_registry.cpp)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR})
 find_package(OpenGL REQUIRED)
@@ -15,4 +15,3 @@ target_link_libraries(${PROJECT_NAME}
 # # For ImGui (assuming Nix installs it as imgui)
 find_package(imgui REQUIRED)
 target_link_libraries(${PROJECT_NAME} imgui)
-# 

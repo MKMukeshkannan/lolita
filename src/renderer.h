@@ -11,6 +11,7 @@
 #include <string>
 
 #include "stb_image.h"
+#include "imgui.h"
 
 namespace lolita {
 bool LoadTextureFromFile(const char* file_name, GLuint* out_texture, int* out_width, int* out_height);
@@ -25,6 +26,8 @@ public:
   std::expected<void, std::string> create_window() ;
   std::expected<void, std::string> setup_imgui() ;
   std::expected<void, std::string> run(const std::function<void(float)> &draw_frame) ;
+
+  const ImGuiWindowFlags window_flag = ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
 
 private:
   std::unique_ptr<GLFWwindow, void (*)(GLFWwindow *)> window{nullptr, glfwDestroyWindow};

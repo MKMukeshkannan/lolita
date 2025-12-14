@@ -11,7 +11,7 @@
         devShells = forEachSupportedSystem ({pkgs}: {
             default = pkgs.mkShell {
               packages = with pkgs; [ 
-                clang-tools cmake gnumake glfw glew spdlog
+                clang-tools cmake gnumake glfw glew spdlog ninja
                 (imgui.override { IMGUI_BUILD_GLFW_BINDING = true; IMGUI_BUILD_OPENGL3_BINDING = true; IMGUI_LINK_GLVND = true;}) 
               ];
             };

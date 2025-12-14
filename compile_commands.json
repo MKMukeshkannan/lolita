@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build",
+  "command": "/nix/store/l58v977vq4qy58m1bw60bzrpkywizz2b-clang-wrapper-21.1.1/bin/clang++ -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/. -std=c++23 -arch arm64 -isysroot /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.3 @src/CMakeFiles/renderer.dir/renderer.cpp.o.modmap -o src/CMakeFiles/renderer.dir/renderer.cpp.o -c /Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/renderer.cpp",
+  "file": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/renderer.cpp",
+  "output": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build/src/CMakeFiles/renderer.dir/renderer.cpp.o"
+},
+{
+  "directory": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build",
+  "command": "/nix/store/l58v977vq4qy58m1bw60bzrpkywizz2b-clang-wrapper-21.1.1/bin/clang++ -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/. -std=c++23 -arch arm64 -isysroot /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.3 @src/CMakeFiles/core.dir/lolita.cpp.o.modmap -o src/CMakeFiles/core.dir/lolita.cpp.o -c /Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/lolita.cpp",
+  "file": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/lolita.cpp",
+  "output": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build/src/CMakeFiles/core.dir/lolita.cpp.o"
+},
+{
+  "directory": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build",
+  "command": "/nix/store/l58v977vq4qy58m1bw60bzrpkywizz2b-clang-wrapper-21.1.1/bin/clang++ -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/. -std=c++23 -arch arm64 -isysroot /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.3 @src/CMakeFiles/core.dir/lolita.effects_registry.cpp.o.modmap -o src/CMakeFiles/core.dir/lolita.effects_registry.cpp.o -c /Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/lolita.effects_registry.cpp",
+  "file": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/lolita.effects_registry.cpp",
+  "output": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build/src/CMakeFiles/core.dir/lolita.effects_registry.cpp.o"
+},
+{
+  "directory": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build",
+  "command": "/nix/store/l58v977vq4qy58m1bw60bzrpkywizz2b-clang-wrapper-21.1.1/bin/clang++ -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/. -std=c++23 -arch arm64 -isysroot /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.3 @src/CMakeFiles/core.dir/lolita.core.cpp.o.modmap -o src/CMakeFiles/core.dir/lolita.core.cpp.o -c /Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/lolita.core.cpp",
+  "file": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/lolita.core.cpp",
+  "output": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build/src/CMakeFiles/core.dir/lolita.core.cpp.o"
+},
+{
+  "directory": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build",
+  "command": "/nix/store/l58v977vq4qy58m1bw60bzrpkywizz2b-clang-wrapper-21.1.1/bin/clang++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image -iframework /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -std=c++23 -arch arm64 -isysroot /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.3 @src/CMakeFiles/lolita.dir/main.cpp.o.modmap -o src/CMakeFiles/lolita.dir/main.cpp.o -c /Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/main.cpp",
+  "file": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/src/main.cpp",
+  "output": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build/src/CMakeFiles/lolita.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build",
+  "command": "/nix/store/l58v977vq4qy58m1bw60bzrpkywizz2b-clang-wrapper-21.1.1/bin/clang++ -I/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/. -std=c++23 -arch arm64 -isysroot /nix/store/ghspqwzhdmzj1rss36lcayyc8mrvparn-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=11.3 @vendor/stb_image/CMakeFiles/stb_image.dir/stb_image.cpp.o.modmap -o vendor/stb_image/CMakeFiles/stb_image.dir/stb_image.cpp.o -c /Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/stb_image.cpp",
+  "file": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/vendor/stb_image/stb_image.cpp",
+  "output": "/Users/mukeshkannan/mk/dev/MAINSTREAM/imgui-lolita/build/vendor/stb_image/CMakeFiles/stb_image.dir/stb_image.cpp.o"
+}
+]

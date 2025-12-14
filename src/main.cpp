@@ -1,32 +1,26 @@
+import renderer;
+import lolita;
+
 #include <GL/glew.h>
+#include <expected>
 #include <GLFW/glfw3.h>
 #include <cfloat>
 #include <cstddef>
 #include <cstdint>
-#include <expected>
-#include <print>
-#include <span>
 #include <spdlog/logger.h>
 #include <spdlog/spdlog.h>
-#include <string>
 
 #include "imgui.h"
 
-#include "lolita.h"
-#include "renderer.h"
-#include "src/effect_registry.h"
-
 void brightness(std::vector<lolita::Color>& temp_image, std::span<FloatPair> param) { 
-        const int16_t t_brightness = static_cast<char>(param[0].curr);
+    const int16_t t_brightness = static_cast<char>(param[0].curr);
 
-        spdlog::info("brig {}", t_brightness);
-        spdlog::info(" -> {}", param[0].curr);
-
-        for (int i = 0; i < 512 * 512; ++i) {
-            (temp_image[i]).red   = std::clamp(temp_image[i].red + t_brightness, 0, 255);
-            (temp_image[i]).green = std::clamp(temp_image[i].green + t_brightness, 0, 255);
-            (temp_image[i]).blue  = std::clamp(temp_image[i].blue + t_brightness, 0, 255);
-        };
+    for (int i = 0; i < 512 * 512; ++i) 
+    {
+        (temp_image[i]).red   = std::clamp(temp_image[i].red + t_brightness, 0, 255);
+        (temp_image[i]).green = std::clamp(temp_image[i].green + t_brightness, 0, 255);
+        (temp_image[i]).blue  = std::clamp(temp_image[i].blue + t_brightness, 0, 255);
+    };
 };
 void brightness_controller(std::span<FloatPair> param, size_t id) { 
 
@@ -81,6 +75,36 @@ void half_tone_controller(std::span<FloatPair> param, size_t id) {
     ImGui::PopID();
 
 };
+void grayscale(std::vector<lolita::Color> &temp_image, std::span<FloatPair> param) {
+    const bool is_grayscale = static_cast<bool>(param[0].curr);
+    if (!is_grayscale) 
+        return;
+
+    for (int i = 0; i < 512 * 512; ++i) {
+        auto avg = (temp_image[i]).red + (temp_image[i]).green + (temp_image[i]).blue;
+        (temp_image[i]).red   = std::clamp(avg, 0, 255); 
+        (temp_image[i]).green = std::clamp(avg, 0, 255);
+        (temp_image[i]).blue  = std::clamp(avg, 0, 255);
+    };
+};
+void grayscale_controller(std::span<FloatPair> param, size_t id) { 
+
+    ImGui::PushID(id);
+    ImGui::PushStyleColor(ImGuiCol_ChildBg, ImGui::GetStyleColorVec4(ImGuiCol_FrameBg));
+    {
+        ImGui::BeginChild("GRAYSCALE", ImVec2(-FLT_MIN, 0), ImGuiChildFlags_Borders | ImGuiChildFlags_AutoResizeY);
+        {
+            ImGui::Button("X");
+            ImGui::SameLine();
+            ImGui::SeparatorText("Grayscale");
+            ImGui::Checkbox("grayscale", reinterpret_cast<bool*>(&param[0].curr));
+        }
+        ImGui::EndChild();
+    }
+    ImGui::PopStyleColor();
+    ImGui::PopID();
+
+};
 
 int main() 
 {
@@ -90,11 +114,11 @@ int main()
   // EFFECT PANEL CONFIGURATION
   lolita::EffectsRegistry registry;
   res = registry.add_effect("brightness", brightness, brightness_controller, 1);
-  res = registry.add_effect("half_tone",  half_tone,  half_tone_controller,  3);
-
+  res = registry.add_effect("half_tone",   half_tone, half_tone_controller,  3);
+  res = registry.add_effect("grayscale",   grayscale, grayscale_controller, 1);
 
   // RENDER SETUP
-  lolita::Renderer renderer;
+  renderer::Renderer renderer;
   if (auto res = renderer.init(); !res)
     return spdlog::error(res.error()), -1;
 
@@ -162,3 +186,5 @@ int main()
 
   return 0;
 };
+
+
